@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: "Special Gothic Expanded One", sans-serif;
+   
+    font-style: normal;
+
+}       
+    
+body{   
+    margin: 0;
+    height: 100vh;
+    background: #000000;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 8, 1) 100%, rgba(0, 0, 0, 1) 0%, rgba(201, 201, 36, 1) 12%, rgba(0, 0, 0, 1) 100%, rgba(237, 221, 83, 1) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+}
+
+.container{
+    border: 2px solid #fff;
+    padding: 30px 40px;
+    width: 40%;
+
+    min-width: 500px;
+
+
+   
+      
+}
+.task-container{
+    padding: 20px 30px;
+    border-radius: 5px ;
+    background-color: #fff;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    display: flex;
+}
+.task-container input{
+    flex: 3;
+    font-size: 1rem;
+    font-weight: 500;
+    border: 2px solid #d1d2d4;
+    padding: 12px;
+    border-radius: 5px;
+}
+.task-container input:focus{
+    outline: none;
+    border-color: #d6d310;
+}
+.new-task-button    {
+    flex: 1;
+        border-radius: 5px;
+        font-weight: 500;
+        height: 50%;
+        font-size: 1rem;
+        border: none;
+        background-color: #d6d310;
+        color: #fff;
+        padding: 12px;
+        margin-left:  12px;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+}
+.new-task-button:hover{
+    font-size: 17.5px;
+    transition: all 0.2s ease-in-out;
+}
+
+.tasks-container{
+    background-color: #fff;
+    padding: 30px 20px;
+    margin-top: 60px;
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    width: 100%;
+}
+
+/* utilitarios para usar depois */
+
+.error {
+    border: 2px solid red !important;
+
+}
+
+.error::placeholder{
+    color: red !important;
+}
+.task-item i {
+        background-color: #d6d310;
+        color: #fff;
+        transition: all 0.2s ease-in-out;
+        padding: 12px;
+        border-radius: 12px;
+}
+.task-item{ 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    transition: all 0.2s ease-in-out;
+}
+.task-item i:hover{
+    cursor: pointer;
+    font-size: 20px;
+    transition: all 0.2s ease-in-out;
+}
