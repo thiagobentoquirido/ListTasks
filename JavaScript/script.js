@@ -69,12 +69,22 @@ const updateLocalStorage = () => {
     console.log(localStorageTasks);
     localStorage.setItem('tasks',JSON.stringify(localStorageTasks));
 
-
+   
 
 }
 const refreshTasksUsingLocalStorage = () => {
+   // JSON.parse(localStorage.getItem('tasks'));
+
     const storedTasks = localStorage.getItem('tasks');
-    const tasksFromLocalStorage = storedTasks ? JSON.parse(storedTasks) : [];
+    let tasksFromLocalStorage = []
+    if (storedTasks) {
+        try {
+            tasksFromLocalStorage = JSON.parse(storedTasks);
+        } catch (error) {
+            console.error("Erro ao analisar o JSON do localStorage:", error);
+            tasksFromLocalStorage = [];  // Em caso de erro no JSON, recomeça com um array vazio
+        }
+    }
     for(const task of tasksFromLocalStorage){
         const taskItemContainer = document.createElement("div");
         taskItemContainer.classList.add("task-item");
