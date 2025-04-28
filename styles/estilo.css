@@ -107,3 +107,8 @@ body{
     font-size: 20px;
     transition: all 0.2s ease-in-out;
 }
+
+.completed {
+    text-decoration: line-through;
+    cursor: pointer;
+  }
